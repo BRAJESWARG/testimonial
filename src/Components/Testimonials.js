@@ -6,6 +6,7 @@ export default function Testimonials(props) {
 
     const [productCount, setProductCount] = useState(0);
 
+
     const btnpressprev = () => {
         const ele = document.getElementById("product-container");
         let width = ele.clientWidth;
@@ -42,8 +43,10 @@ export default function Testimonials(props) {
                 &nbsp;&nbsp;
             </div>
             <div className="product-carousel">
-                <button className="pre-btn" id='pre-btn' onClick={btnpressprev} disabled={productCount <= 0} ><p>&lt;</p></button>
-                <button className="next-btn" onClick={btnpressnext} disabled={productCount >= 3} ><p>&gt;</p></button>
+                <button className="pre-btn pre-btn-desktop" id='pre-btn' onClick={btnpressprev} disabled={productCount <= 0} ><p>&lt;</p></button>
+                <button className="next-btn next-btn-desktop" onClick={btnpressnext} disabled={productCount >= 3} ><p>&gt;</p></button>
+                <button className="pre-btn pre-btn-mobile" id='pre-btn' onClick={btnpressprev} disabled={productCount <= 0} ><p>&lt;</p></button>
+                <button className="next-btn next-btn-mobile" onClick={btnpressnext} disabled={productCount >= 9} ><p>&gt;</p></button>
                 
                 <div className="product-container" id="product-container" responsive={responsive} >
                     {product}
